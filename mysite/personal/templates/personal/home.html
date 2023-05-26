@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style= "border: 2px solid #000;">
+<h1>This is the body</h1>
+<p>here is where you should put your stuffs which is supposed to be in the body</p>
+<!-- {{some_string}}
+{{some_number}} -->
+
+<!-- how to write loops in django 
+{% for list_item in list_of_values %}
+    {{list_item}}
+{% endfor %}
+ -->
+
+<!-- how to write loops in django -->
+<!-- {% for list_item in list_of_values %}
+{% include 'personal/snippets/body_snippet.html' with value=list_item %} -->
+<!-- so here i am looping through some datas which we got from view and passing through snippet -->
+<!-- {% endfor %} --> -->
+<!-- how to write loops in django -->
+
+{% for question in questions %} <!--as the context['questions'] is passing from views.py-->
+{% include 'personal/snippets/body_snippet.html' with value=question%}
+<!-- so here i am looping through some datas which we got from view and passing through snippet -->
+{% endfor %}
+</div>
+{% endblock content %}
