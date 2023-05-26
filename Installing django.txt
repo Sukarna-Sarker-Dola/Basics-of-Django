@@ -1,0 +1,14 @@
+1. Install python
+2. py -m venv project-name
+3. project-name\Scripts\activate.bat
+4. py -m pip install Django   //Install Django
+5. py -m pip install colorama  //Colored terminal output
+6. pip install virtualenv
+
+Common pitfalls:
+If django-admin only displays the help text no matter what arguments it is given, there is probably a problem with the file association in Windows. Check if there is more than one environment variable set for running Python scripts in PATH. This usually occurs when there is more than one Python version installed.
+
+If you are connecting to the internet behind a proxy, there might be problems in running the command py -m pip install Django. Set the environment variables for proxy configuration in the command prompt as follows:
+...\> set http_proxy=http://username:password@proxyserver:proxyport
+...\> set https_proxy=https://username:password@proxyserver:proxyport
+In general, Django assumes that UTF-8 encoding is used for I/O. This may cause problems if your system is set to use a different encoding. Recent versions of Python allow setting the PYTHONUTF8 environment variable in order to force a UTF-8 encoding. Windows 10 also provides a system-wide setting by checking Use Unicode UTF-8 for worldwide language support in Language ‣ Administrative Language Settings ‣ Change system locale in system settings.
